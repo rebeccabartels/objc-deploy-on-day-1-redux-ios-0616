@@ -21,8 +21,7 @@
 {
     self = [super init];
     if(self) {
-        // Do initialization of your game here, inside this if statement.
-        // Leave the rest of this method alone :)
+        [self resetBoard];
 
     }
 
@@ -31,37 +30,116 @@
 
 -(void)resetBoard
 {
-
+    
+    self.board =      [@[[@[ @"", @"", @"" ] mutableCopy],
+                         [@[ @"", @"", @"" ] mutableCopy],
+                         [@[ @"", @"", @"" ] mutableCopy] ]mutableCopy];
+    
+    
+    
 }
 
 -(NSString *)playerAtColumn:(NSUInteger)column row:(NSUInteger)row
 {
-    return @"";
+
+   return self.board [column][row];
+    NSLog (@"%@", self.board);
+    
 }
 
+
 -(BOOL)canPlayAtColumn:(NSUInteger)column row:(NSUInteger)row
-{
-    return YES;
+
+// @(column)
+
+
+{ if([self.board [column][row] isEqualToString:@""])
+    {return YES;
+    } else {
+    
+    return NO;
+    }
 }
 
 -(void)playXAtColumn:(NSUInteger)column row:(NSUInteger)row
 {
-
+    
+    BOOL canPlay = [self canPlayAtColumn:column row:row];
+    
+    if (canPlay == YES) {
+    
+  self.board [column][row] = @"X";
+    }
+    
 }
 
 -(void)playOAtColumn:(NSUInteger)column row:(NSUInteger)row
 {
+    BOOL canPlay = [self canPlayAtColumn:column row:row];
+    if (canPlay == YES) {
+        self.board [column][row] = @"O";
+    }
+    
+    }
 
-}
+
 
 -(NSString *)winningPlayer
 {
-    return @"";
-}
+    
+    ///////1st Row
+    if ([self.board [0][0] isEqualToString: self.board [0][1]] && [self.board [0][0] isEqualToString:self.board [0][2]])
+         
+         {return self.board [0][0];
+         }
+    
+    ///////2nd Row
+         if ([self.board [1][0] isEqualToString:self.board [1][1]] && [self.board [1][0] isEqualToString:self.board [1][2]])
+         { return self.board [1][0];
+         }
+    
+   ///////3rd Row
+    if ([self.board [2][0] isEqualToString:self.board [2][1]] && [self.board [2][0] isEqualToString:self.board [2][2]])
+                  { return self.board [2][0];
+                  }
+    
+   //////1st Column
+    if ([self.board [0][0] isEqualToString:self.board [1][0]] && [self.board [0][0] isEqualToString:self.board [2][0]])
+                                                                                   {return self.board [0][0];
+                                                                                   }
+                    
+   ///////2nd Column
+                    if ([self.board [0][1] isEqualToString:self.board [1][1]] && [self.board [0][1] isEqualToString: self.board [2][1]])
+                                                                                 {return self.board [0][1];
+                                                                                 }
+   ///////3rd Column
+                    if ([self.board [0][2] isEqualToString: self.board [1][2]] && [self.board [0][2] isEqualToString: self.board [2][2]])
+                                                                                  {return self.board [0][2];
+                                                                                  }
+   ///////1st Diagonal
+                    if ([self.board [0][0] isEqualToString: self.board [1][1]] && [self.board [0][0] isEqualToString: self.board [2][2]])
+                                                                                  {return self.board [0][0];
+                                                                                  }
+    ///////2nd Diagonal
+    if ([self.board [0][2] isEqualToString: self.board [1][1]] && [self.board [0][2] isEqualToString: self.board [2][0]])
+    {return self.board [0][2];
+    }
 
+return @"";
+
+        }
 -(BOOL)isADraw
 {
-    return NO;
-}
+    BOOL boardIsFull = YES;
+    for (NSUInteger i = 0; i < 3; i++) {
+        for (NSUInteger j = 0; j < 3; j++) {
+            if ([self.board [i][j] isEqualToString:@""] ) {
+                boardIsFull=NO;
+            }
+        }
+    }
+    return boardIsFull;
+    }
+
 
 @end
