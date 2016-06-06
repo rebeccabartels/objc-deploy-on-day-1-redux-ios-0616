@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		25F408A41BE3FEA099B571F8 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FEBF89AA2BE1FFE21384F3E /* Images.xcassets */; };
+		43A418E51D0625E3004C6FCE /* FISTicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A418E41D0625E3004C6FCE /* FISTicTacToeGame.m */; };
+		43A418E71D062675004C6FCE /* FISTicTacToeGame.m in Sources */ = {isa = PBXBuildFile; fileRef = 43A418E61D062675004C6FCE /* FISTicTacToeGame.m */; };
 		68380356CD480AFF70799AD3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5936C5865AD9938BBCA935D /* Main.storyboard */; };
 		75549B336D725EF7601710CC /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 46D55100A0B533155F355A44 /* libPods.a */; };
 		9D456CCAAB83A0B340D94CDC /* libPods-unit_tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8CC1F5890B7B941DDD33357A /* libPods-unit_tests.a */; };
@@ -41,6 +43,8 @@
 		1B3F032B69D2878ED0F14DA2 /* DeployOnDay1Redux.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DeployOnDay1Redux.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DBBBF6B5FD226C12298A6D1 /* DeployOnDay1Redux-Prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DeployOnDay1Redux-Prefix.pch"; sourceTree = "<group>"; };
 		1FEBF89AA2BE1FFE21384F3E /* Images.xcassets */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		43A418E41D0625E3004C6FCE /* FISTicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FISTicTacToeGame.m; sourceTree = "<group>"; };
+		43A418E61D062675004C6FCE /* FISTicTacToeGame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FISTicTacToeGame.m; path = ../../../../Documents/FISTicTacToeGame.m; sourceTree = "<group>"; };
 		46D55100A0B533155F355A44 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FB736C1BCFC331C9A0F4113 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS7.1.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		8CC1F5890B7B941DDD33357A /* libPods-unit_tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-unit_tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +159,7 @@
 			children = (
 				BD3B27B31BB199EF0015D4B3 /* FISTicTacToeGame.h */,
 				BD3B27B41BB199EF0015D4B3 /* FISTicTacToeGame.m */,
+				43A418E61D062675004C6FCE /* FISTicTacToeGame.m */,
 				BD3B27C21BB1A7A70015D4B3 /* FISComputerPlayer.h */,
 				BD3B27C31BB1A7A70015D4B3 /* FISComputerPlayer.m */,
 				BD3B27CB1BB1EEFB0015D4B3 /* Guts */,
@@ -215,6 +220,7 @@
 		DE1847DA4EB2A875FF3DE6DF = {
 			isa = PBXGroup;
 			children = (
+				43A418E41D0625E3004C6FCE /* FISTicTacToeGame.m */,
 				B3F77EC5A0C7A1C795641EAB /* DeployOnDay1Redux */,
 				E110BD2D7D499D87BE33181D /* UnitTests */,
 				FBAEC7B4C4CF596F0CBC094E /* Frameworks */,
@@ -440,6 +446,8 @@
 				BD3B27C41BB1A7A70015D4B3 /* FISComputerPlayer.m in Sources */,
 				BD3B27B51BB199EF0015D4B3 /* FISTicTacToeGame.m in Sources */,
 				BD3B27BE1BB1A7160015D4B3 /* FISComputerPlayer+Guts.m in Sources */,
+				43A418E71D062675004C6FCE /* FISTicTacToeGame.m in Sources */,
+				43A418E51D0625E3004C6FCE /* FISTicTacToeGame.m in Sources */,
 				BD3B27CE1BB1F4DF0015D4B3 /* FISGameOverViewController.m in Sources */,
 				BD3B27CA1BB1E8070015D4B3 /* FISNewGameViewController.m in Sources */,
 				E3D5C2F18256C5CBB451A3BF /* FISAppDelegate.m in Sources */,
